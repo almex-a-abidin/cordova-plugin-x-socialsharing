@@ -74,8 +74,7 @@
     <config-file target="AndroidManifest.xml" parent="/*/application">
       <receiver android:name="nl.xservices.plugins.ShareChooserPendingIntent"
        android:enabled="true"
-       android:exported="false"
-       tools:node="merge">
+       android:exported="false">
         <intent-filter>
           <action android:name="android.intent.action.SEND"/>
         </intent-filter>
@@ -90,8 +89,7 @@
       <provider android:authorities="${applicationId}.sharing.provider" 
       android:exported="false" 
       android:grantUriPermissions="true" 
-      android:name="nl.xservices.plugins.FileProvider"
-      tools:node="merge">
+      android:name="nl.xservices.plugins.FileProvider">
         <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/sharing_paths" />
       </provider>
     </config-file>
